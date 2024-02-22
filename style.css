@@ -27,6 +27,7 @@ body{
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  height: 100vh;
  
 }
 body *{
@@ -152,4 +153,13 @@ footer{
 .claro #switch button{
   left: 0;
 }
-
+/* Media querias
+*/
+@media (min-width: 700px){
+  :root{
+     --bg-url: url(assets/assets/bg-desktop.jpg);
+  }
+  .claro{
+     --bg-url: url(assets/assets/bg-desktop-light.jpg);
+  }
+}
