@@ -137,7 +137,10 @@ footer{
   z-index: 1;
   right: 0;
   transform: translateY(-50%);
-  
+  animation: slide-back 0.4s ;
+}
+#switch button:hover{
+  outline: 8px solid var(--bg-a-footer-hover);
 }
 #switch span{
   display: block;
@@ -151,7 +154,8 @@ footer{
   
 }
 .claro #switch button{
-  left: 0;
+  
+  animation: slide 0.4s forwards;
 }
 /* Media querias
 */
@@ -161,5 +165,23 @@ footer{
   }
   .claro{
      --bg-url: url(assets/assets/bg-desktop-light.jpg);
+  }
+}
+/*animation*/
+
+@keyframes slide{
+  from{
+    right: 0;
+  }
+  to{
+    right: 50%;
+  }
+}
+@keyframes slide-back{
+  from{
+    right: 50%;
+  }
+  to{
+    right: 0;
   }
 }
